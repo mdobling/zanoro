@@ -1,11 +1,259 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Meine Landingpage</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Zanoro - Geometry Shape Transforming 3D" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zanoro - Geometry Shape Transforming 3D</title>
+
+  <style>
+    /* RESET (einfach gehalten) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Grundlegende Schrift, Farben und Layout */
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header / Hero-Bereich */
+    header {
+      background: url("https://via.placeholder.com/1600x800?text=Zanoro+Games") no-repeat center/cover;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+      position: relative;
+    }
+
+    header .overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 1;
+    }
+
+    header h1 {
+      z-index: 2;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      z-index: 2;
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Hauptbereich / Content-Sektionen */
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .section p {
+      max-width: 700px;
+      margin: 0.5rem auto;
+      color: #555;
+    }
+
+    /* Linie unter Überschrift */
+    .section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #333;
+      margin: 0.5rem auto;
+    }
+
+    /* Screenshot-Galerie */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .gallery-item .item-content {
+      padding: 1rem;
+    }
+
+    .gallery-item h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .gallery-item p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    /* CTA-Bereich */
+    .cta {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      margin-bottom: 1.5rem;
+      color: #666;
+    }
+
+    .cta button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta button:hover {
+      background-color: #555;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #f0f0f0;
+      color: #666;
+    }
+
+    /* Responsive Anpassungen */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Willkommen!</h1>
-    <p>Hier entsteht meine neue Website.</p>
+
+  <!-- Hero / Header-Bereich -->
+  <header>
+    <div class="overlay"></div>
+    <div>
+      <h1>ZANORO</h1>
+      <p>Minimalistische und moderne Spieleentwicklung für Android, iOS und mehr.</p>
+    </div>
+  </header>
+
+  <!-- Haupt-Content -->
+  <div class="content">
+    <!-- Section: Über Zanoro -->
+    <div class="section">
+      <h2>Über Zanoro</h2>
+      <p>
+        Zanoro steht für innovative Ideen und spannende Umsetzungen im Bereich Mobile Games und 
+        3D-Anwendungen. Wir legen Wert auf ein minimalistisches, ansprechendes Design – 
+        immer mit dem Fokus auf das beste Spielerlebnis.
+      </p>
+    </div>
+
+    <!-- Section: Vorstellung des Projekts -->
+    <div class="section">
+      <h2>Geometry Shape Transforming 3D</h2>
+      <p>
+        Das Projekt „Geometry Shape Transforming 3D“ ist ein einzigartiges Puzzle- und 
+        Geschicklichkeitsspiel, bei dem du geometrische Formen in Echtzeit manipulierst. 
+        Dabei stehen Optik, Dynamik und intuitive Steuerung im Vordergrund.
+      </p>
+
+      <!-- Galerie mit 3 Screenshots -->
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="Screenshot1.webp" alt="Screenshot 1 - Geometry Shape Transforming 3D" />
+          <div class="item-content">
+            <h3>Screenshot 1</h3>
+            <p>Ein erster Einblick in die farbenfrohe Welt und den Spielaufbau.</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="Screenshot2.webp" alt="Screenshot 2 - Geometry Shape Transforming 3D" />
+          <div class="item-content">
+            <h3>Screenshot 2</h3>
+            <p>Fein justierte Formen und 3D-Effekte sorgen für ein immersives Erlebnis.</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="Screenshot3.webp" alt="Screenshot 3 - Geometry Shape Transforming 3D" />
+          <div class="item-content">
+            <h3>Screenshot 3</h3>
+            <p>Knifflige Level und Herausforderungen – perfekt für Fans von Rätselspielen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA / Kontaktbereich -->
+    <div class="section cta">
+      <h2>Neugierig geworden?</h2>
+      <p>Wenn du Fragen hast oder mehr über das Projekt erfahren möchtest, freuen wir uns über deine Nachricht.</p>
+      <button onclick="window.location.href='mailto:info@zanoro.de';">Kontakt aufnehmen</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Zanoro – All Rights Reserved
+  </footer>
+
 </body>
 </html>
